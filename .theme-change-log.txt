@@ -1,0 +1,14 @@
+Theme changes applied on 2026-05-03:
+- Hero: dark neon purple gradient (from-[#0f172a] via-[#1e1b4b] to-[#4c1d95]) + purple shadow glow
+- Header: dark transparent header, subtle purple border, CTA gradient purple->pink
+- Chat: glass container (bg-white/10 + backdrop-blur), transparent messages area, soft purple message bubbles
+- Buttons: gradient from-purple-600 to-pink-500 with purple glow shadow
+
+Files edited:
+- src/HeroPage/heroPage.jsx
+- src/partials/Header.jsx
+- src/HeroPage/demoChatBox/chatBox.jsx
+
+Notes:
+- Only Tailwind classes were changed as requested.
+- No structural/layout changes made.
