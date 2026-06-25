@@ -1,6 +1,6 @@
 import app from "./app.js";
 
-const PORT = proccess.env.PORT || 5006;
+const PORT = process.env.PORT || 5006;
 
 app.get('/', (req, res)=> {
 console.log('server created succesfully');
