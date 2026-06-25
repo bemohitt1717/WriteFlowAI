@@ -1,18 +1,16 @@
 import { useState } from "react";
-import {CheckIcon, CrossIcon, ArrowIcon, plans} from "./"
+import { CheckIcon, CrossIcon, ArrowIcon } from "./icons/icons.jsx";
+import { plans } from "./data/PlanData";
 import { useNavigate } from "react-router-dom";
 import { PATHS } from "@/utils/path";
 
 const Pricing = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
 
-  const navigate = useNavigate();  
-
+  const navigate = useNavigate();
 
   return (
-    <section
-      className="theme-section-soft relative w-full overflow-hidden px-4 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-16"
-    >
+    <section className="theme-section-soft relative w-full overflow-hidden px-4 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-16">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[var(--color-primary)]/10 blur-3xl"
@@ -27,8 +25,6 @@ const Pricing = () => {
       />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center">
-        
-
         <h2 className="mt-6 text-center text-4xl font-bold tracking-tight text-[var(--color-text)] sm:text-5xl md:text-6xl">
           Simple & Affordable{" "}
           <span className="text-[var(--color-accent)]">Pricing</span>
@@ -110,12 +106,11 @@ const Pricing = () => {
 
                   <button
                     type="button"
-                  
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedPlan(plan.name);
-                      if(plan.name == "STARTER"){
-                        navigate(PATHS.DASHBOARD);                        
+                      if (plan.name == "STARTER") {
+                        navigate(PATHS.DASHBOARD);
                       }
                     }}
                     className={`mt-6 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors duration-150 ${

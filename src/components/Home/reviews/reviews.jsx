@@ -1,7 +1,8 @@
 // import RenderCard from "./components/ReviewCard";
 // import reviewData from "./data/reviewData";
 import "./styles/animation.css";
-import { ReviewCard, reviewsData } from "./";
+import ReviewCard from "./components/ReviewCard";
+import reviewsData from "./data/reviewData";
 
 const Reviews = () => {
   const testimonials = reviewsData;
