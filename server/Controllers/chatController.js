@@ -22,7 +22,7 @@ export const chatController = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      response: result.text,
+      response: result.text || "no response generated",
       message: "prompt received successfully",
       prompt,
     });
