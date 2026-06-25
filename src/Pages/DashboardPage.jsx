@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Dashboard } from "../components/DashBoard/dashboardLayout";
 import { Icon } from "../components/DashBoard/icons/Icons";
+import { LogIn } from "lucide-react";
 
 const DashboardPage = () => {
   const [chats, setChats] = useState(() => {
@@ -67,6 +68,7 @@ const DashboardPage = () => {
       });
 
       const data = await response.json();
+      
 
       const aiReply = {
         id: Date.now() + 1,
