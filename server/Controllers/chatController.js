@@ -11,7 +11,7 @@ export const chatController = async (req, res) => {
       });
     }
 
-    const ai = new Groq({
+    const grok = new Groq({
       apiKey: process.env.GROQ_API_KEY,
     });
 
@@ -20,7 +20,7 @@ export const chatController = async (req, res) => {
     //   contents: prompt,
     // });
 
-    const completion = await Groq.Chat.Completions.Create({
+    const completion = await grok.Chat.Completions.Create({
         model: "llama-3.3-70b-versatile",
   messages: [
     {
