@@ -8,9 +8,14 @@ const app = express();
 configDotenv();
 
 app.use(express.json());
-app.use(cors({
-    origin:"*"
-}));
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 
 app.use("/api", router);
 
